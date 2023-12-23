@@ -63,7 +63,7 @@ export default function InvoiceDetail() {
 
   return (
     <div className="flex flex-col h-full gap-6">
-      <div className="border-l-4 border-indigo-700 rounded-e-md bg-gray-800 p-2 flex justify-between items-center">
+      <div className="border-l-4 border-indigo-700 rounded-e-md flex flex-col gap-2 bg-gray-800 p-2 sm:flex sm:flex-row sm:justify-between sm:items-center">
         <div className="flex items-center gap-1">
           <TagText>Status: {invoice.status}</TagText>
         </div>
@@ -110,8 +110,8 @@ export default function InvoiceDetail() {
         </div>
       </div>
 
-      <div className="h-full grid grid-cols-6 gap-y-8 grid-rows-[auto auto auto] overflow-y-scroll text-gray-300 scrollbar">
-        <div className="row-start-1 col-span-3">
+      <div className="h-full flex flex-col gap-3 text-center md:text-left md:grid md:grid-cols-6 gap-y-8 md:grid-rows-[auto auto auto] overflow-y-scroll text-gray-300 scrollbar">
+        <div className="md:row-start-1 md:col-span-3">
           <h3 className="uppercase font-bold text-xl tracking-wide">
             {invoice.name}
           </h3>
@@ -120,7 +120,7 @@ export default function InvoiceDetail() {
           </h5>
         </div>
 
-        <div className="col-span-3 text-gray-500 row-start-1 justify-self-end flex flex-col justify-end items-end">
+        <div className="md:col-span-3 text-gray-500 md:row-start-1 md:justify-self-end flex flex-col md:justify-end md:items-end">
           <p className="font-bold">{invoice.companyAddress}</p>
           <p className="font-bold">
             {invoice.companyCity}, {invoice.companyPostalCode},{" "}
@@ -128,7 +128,7 @@ export default function InvoiceDetail() {
           </p>
         </div>
 
-        <div className="col-start-1 col-span-2 row-start-2 flex flex-col gap-4">
+        <div className="md:col-start-1 md:col-span-2 md:row-start-2 flex flex-col gap-4">
           <div>
             <h4 className="font-bold">Invoice Date</h4>
             <p>{invoice.date}</p>
@@ -139,7 +139,7 @@ export default function InvoiceDetail() {
           </div>
         </div>
 
-        <div className="col-start-3 col-span-2 row-start-2 text-sm italic">
+        <div className="md:col-start-3 md:col-span-2 md:row-start-2 text-sm italic">
           <p className="font-bold not-italic uppercase">Bill To</p>
           <h4 className="uppercase text-yellow-400">
             {invoice.users.fullName}
@@ -153,7 +153,7 @@ export default function InvoiceDetail() {
           {/* <h4>{invoice.users.country}</h4> */}
         </div>
 
-        <div className="col-start-5 col-span-2 row-start-2">
+        <div className="md:col-start-5 md:col-span-2 md:row-start-2">
           <p className="font-bold">Sent To</p>
           <TagText text={"normal"}>{invoice.users.email}</TagText>
         </div>

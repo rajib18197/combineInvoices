@@ -8,7 +8,7 @@ import Logout from "../features/authentication/Logout";
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-700 p-1 rounded">
+    <nav className="bg-gray-700 p-1 rounded w-max">
       <ul className="flex gap-3 items-center">
         <li>
           <NavLink
